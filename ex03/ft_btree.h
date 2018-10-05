@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 01:46:31 by seli              #+#    #+#             */
-/*   Updated: 2018/10/05 01:50:13 by seli             ###   ########.fr       */
+/*   Updated: 2018/10/05 02:05:50 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,5 @@ typedef struct		s_btree
 	struct s_btree	*right;
 	void			*item;
 }					t_btree;
-
-t_btree				*btree_create_node(void *item);
 
 #endif
