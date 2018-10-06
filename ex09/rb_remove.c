@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btree.h                                         :+:      :+:    :+:   */
+/*   rb_remove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/05 23:20:28 by seli              #+#    #+#             */
-/*   Updated: 2018/10/05 23:32:01 by seli             ###   ########.fr       */
+/*   Created: 2018/10/05 23:22:00 by seli              #+#    #+#             */
+/*   Updated: 2018/10/05 23:31:32 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BTREE_H
-# define FT_BTREE_H
+#include "ft_btree.h"
 
-enum					e_rb_color
+t_rb_node		*rb_create(void *item)
 {
-	RB_BLACK,
-	RB_RED
-};
+	t_rb_node	*node;
 
-typedef struct			s_rb_node
+	node = malloc(sizeof(t_rb_node));
+	node->left = 0;
+	node->right = 0;
+	node->data = item;
+	node->color = RB_BLACK;
+	return (node);
+}
+
+void			rb_remove(struct s_rb_node **root, void *data,
+	int (*cmpf)(void *, void *), void (*freef)(void *))
 {
-	struct s_rb_node	*parent;
-	struct s_rb_node	*left;
-	struct s_rb_node	*right;
-	void				*data;
-	enum e_rb_color		color;
-}						t_rb_node;
-
-#endif
+}
