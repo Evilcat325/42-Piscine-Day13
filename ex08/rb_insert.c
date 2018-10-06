@@ -6,7 +6,7 @@
 /*   By: seli <seli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 23:22:00 by seli              #+#    #+#             */
-/*   Updated: 2018/10/05 23:27:16 by seli             ###   ########.fr       */
+/*   Updated: 2018/10/05 23:32:24 by seli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_rb_node		*rb_create(void *item)
 	return (node);
 }
 
-void	rb_insert(struct s_rb_node **root,
+void			rb_insert(struct s_rb_node **root,
 				void *data, int (*cmpf)(void *, void *))
 {
 	if (!*root)
